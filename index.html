@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spooler App Template</title>
+
+    <link rel="shortcut icon" href="assets/images/icon-favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="assets/images/icon-favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon-favicon-apple.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/qpg3zcg.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="container-fluid mb-5">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg bg-container font-titles fw-medium">
+          <div class="px-2">
+            <button type="button" class="btn btn-subtle btn-none-drop bg-deep ps-1 pt-1 text-start"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <figure class="m-0 mb-1" style="position: relative; top: -4px; left: 5px; height: 12px;">
+                <img class="img-fluid-height hidden-color-theme-dark" src="assets/images/icon-spooler-logo-light.svg"
+                  alt="Spooler Logo" />
+                <img class="img-fluid-height hidden-color-theme-light" src="assets/images/icon-spooler-logo-dark.svg"
+                  alt="Spooler Logo" />
+              </figure>
+              <div class="ps-1 fw-medium small">App
+                Template</div>
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu ms-2">
+              <li><a class="dropdown-item fw-light ps-2 pe-4" href="#" title="Switch to Spooler Publisher"><i
+                    class="bi bi-music-note-list me-2"></i>Publisher</a>
+              </li>
+              <li><a class="dropdown-item fw-light ps-2 pe-4 active" href="#" title="Switch to Spooler App Template"><i
+                    class="bi bi-file-earmark-code-fill me-2"></i>App
+                  Template</a>
+              </li>
+              <li><a class="dropdown-item fw-light ps-2 pe-4" href="#" title="Switch to Spooler Map Maker"><i
+                    class="bi bi-map-fill me-2"></i>Map Maker</a>
+              </li>
+              <li><a class="dropdown-item fw-light ps-2 pe-4" href="#" title="Switch to Spooler Commute Maker"><i
+                    class="bi bi-cassette-fill me-2"></i>Commute
+                  Maker</a></li>
+            </ul>
+          </div>
+
+          <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+            aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
+            aria-labelledby="navbarOffcanvasLgLabel">
+            <div class="d-lg-flex align-items-center">
+              <ul class="navbar-nav flex-grow-1 gap-2 px-3 px-lg-1">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Default Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Active Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item fw-light" href="#">Action</a></li>
+                    <li><a class="dropdown-item fw-light" href="#">Another action</a></li>
+                    <hr class="dropdown-divider">
+                    <li><a class="dropdown-item fw-light" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav flex-grow-1 ps-3 px-lg-1 d-lg-none">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Search</a>
+                  <a class="nav-link" aria-current="page" href="#">Color Mode</a>
+                  <a class="nav-link" aria-current="page" href="#">User</a>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav align-items-center d-none d-lg-flex">
+                <li class="nav-item">
+                  <button type="button" class="btn btn-none btn-none-drop me-1" data-bs-toggle="modal"
+                    data-bs-target="#navSearchModal">
+                    <i class="bi bi-search"></i>
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                  <div class="modal modal-lg modal-transparent fade" id="navSearchModal" tabindex="-1"
+                    aria-labelledby="navSearchModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="row gap-2 px-3">
+                            <input type="text" value="" class="col form-control" id="inputSearch">
+                            <button type="button" class="col-2 btn btn-lg btn-primary">Search</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <button type="button" class="btn btn-none btn-none-drop" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="bi bi-circle-half fs-6"></i>
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                  <ul id="color-mode-control" class="dropdown-menu dropdown-menu-end">
+                    <li><button value="light" class="dropdown-item ps-2 fw-light"><i
+                          class="me-2 bi-sun-fill"></i>Light</button>
+                    </li>
+                    <li><button value="dark" class="dropdown-item ps-2 fw-light"><i
+                          class="me-2 bi-moon-fill"></i>Dark</button></li>
+                    <li><button value="auto" class="active dropdown-item ps-2 fw-light"><i
+                          class="me-2 bi-gear-fill"></i>Auto</button>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <button type="button" class="btn btn-none btn-none-drop" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="bi bi-person-fill-gear fs-5"></i>
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item fw-light">...</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- BREADCRUMBS <div class="row" style="font-size: small" aria-label="breadcrumb">
+        <ol class="breadcrumb my-1 ms-3">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Library</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+      </div> -->
+    </header>
+
+    <main class="container">
+      <div class="mb-5">
+        <h1>Branding Examples</h1>
+      </div>
+
+      <section class="row">
+        <div class="container mb-5">
+          <div class="row">
+
+            <article id="logos" class="col-12 col-lg-6 mb-5 mb-lg-0 d-flex flex-column">
+              <header class="mb-3">
+                <h2>Logos</h2>
+              </header>
+
+              <div class="p-4 pb-1 bg-container shadow rounded">
+                <ul class="list-unstyled">
+                  <li class="mb-4">
+                    <figure>
+                      <img class="hidden-color-theme-dark" src="assets/images/icon-spooler-logo-light.svg"
+                        alt="Spooler Logo" />
+                      <img class="hidden-color-theme-light" src="assets/images/icon-spooler-logo-dark.svg"
+                        alt="Spooler Logo" />
+                    </figure>
+                    <div><strong>Full</strong></div>
+                    <small><a href="" target="_blank">SVG</a> (dynamic), <a href="" target="_blank">PNG</a> (light),
+                      <a href="" target="_blank">PNG</a> (dark)</small>
+                  </li>
+                  <li>
+                    <figure style="height: 66px">
+                      <img class="img-fluid-height hidden-color-theme-dark" src="assets/images/icon-favicon-light.svg"
+                        alt="Spooler Logo" />
+                      <img class="img-fluid-height hidden-color-theme-light" src="assets/images/icon-favicon-dark.svg"
+                        alt="Spooler Logo" />
+                    </figure>
+                    <div><strong>Favicon</strong></div>
+                    <small><a href="" target="_blank">SVG</a> (dynamic), <a href="" target="_blank">PNG</a> (light),
+                      <a href="" target="_blank">PNG</a> (dark)</small>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article id="typography" class="col-12 col-lg-6 d-flex flex-column">
+              <header class="mb-3">
+                <h2>Typography</h2>
+              </header>
+
+              <div class="h-100 p-4 pb-3 bg-container shadow rounded">
+                <ul class="list-unstyled row">
+                  <li class="col-12 mb-4 font-titles">
+                    <p class="fs-1 fw-medium mb-0">Tenon</p>
+                    <p class="fs-5 fw-light mb-1">Headings & Display</p>
+                    <small><span class="fw-light">Light</span>, <span class="fw-medium">Medium</span></small>
+                  </li>
+                  <li class="col-12">
+                    <p class="fs-1 mb-0">Specter</p>
+                    <p class="fs-5 mb-1">Body & Content</p>
+                    <small>Regular, <em>Regular Italic</em>, <strong>Bold</strong>, <strong><em>Bold
+                          Italic</em></strong></small>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <article id="colors" class="container mb-5">
+          <header class="mb-3">
+            <h2>Colors</h2>
+          </header>
+
+          <div class="p-4 pb-1 bg-container shadow rounded">
+            <ul class="list-unstyled row mb-4">
+              <li class="col">
+                <div class="bg-black mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">Black</strong>
+                  <small class="col text-lg-end">#0e0a07</small>
+                </div>
+              </li>
+              <li class="col">
+                <div class="bg-dark mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">Dark</strong>
+                  <small class="col text-lg-end">#1B2228</small>
+                </div>
+              </li>
+              <li class="col">
+                <div class="bg-light mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">Light</strong>
+                  <small class="col text-lg-end">#ece5df</small>
+                </div>
+              </li>
+              <li class="col">
+                <div class="bg-white mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">White</strong>
+                  <small class="col text-lg-end">#fcfbfa</small>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="list-unstyled row mb-4">
+              <li class="col">
+                <div class="bg-primary mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">Primary</strong>
+                  <small class="col text-lg-end">#1096c1</small>
+                </div>
+              </li>
+              <li class="col">
+                <div class="bg-secondary mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">Secondary</strong>
+                  <small class="col text-lg-end">#298085</small>
+                </div>
+              </li>
+              <li class="col">
+                <div class="bg-tertiary-light mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">Tertiary</strong>
+                  <small class="col text-lg-end">#4dc27a</small>
+                </div>
+              </li>
+              <li class="col">
+                <div class="bg-tertiary-dark mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">Tertiary</strong>
+                  <small class="col text-lg-end">#0e283a</small>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="list-unstyled row mb-4">
+              <li class="col">
+                <div class="bg-info mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">Info</strong>
+                  <small class="col text-lg-end">#c051d2</small>
+                </div>
+              </li>
+              <li class="col">
+                <div class="bg-warning mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">Warning</strong>
+                  <small class="col text-lg-end">#eacc06</small>
+                </div>
+              </li>
+              <li class="col">
+                <div class="bg-success mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">Success</strong>
+                  <small class="col text-lg-end">#4dc27a</small>
+                </div>
+              </li>
+              <li class="col">
+                <div class="bg-danger mb-1 rounded ratio ratio-16x9">
+                </div>
+                <div class="row justify-space-between">
+                  <strong class="col-12 col-lg-6">Danger</strong>
+                  <small class="col text-lg-end">#fa0219</small>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="row">
+        <article id="buttons" class="container mb-5">
+          <header class="mb-3">
+            <h2>Buttons</h2>
+          </header>
+
+          <div class="p-4 bg-container shadow rounded">
+            <div class="row">
+              <div class="col-lg-8">
+
+                <p class="bs-component">
+                  <button type="button" class="btn btn-primary">Primary</button>
+                  <button type="button" class="btn btn-secondary">Secondary</button>
+                  <button type="button" class="btn btn-success">Success</button>
+                  <button type="button" class="btn btn-info">Info</button>
+                  <button type="button" class="btn btn-warning">Warning</button>
+                  <button type="button" class="btn btn-danger">Danger</button>
+                  <button type="button" class="btn btn-link">Link</button>
+                </p>
+
+                <p class="bs-component">
+                  <button type="button" class="btn btn-primary disabled">Primary</button>
+                  <button type="button" class="btn btn-secondary disabled">Secondary</button>
+                  <button type="button" class="btn btn-success disabled">Success</button>
+                  <button type="button" class="btn btn-info disabled">Info</button>
+                  <button type="button" class="btn btn-warning disabled">Warning</button>
+                  <button type="button" class="btn btn-danger disabled">Danger</button>
+                  <button type="button" class="btn btn-link disabled">Link</button>
+                </p>
+
+                <p class="bs-component">
+                  <button type="button" class="btn btn-outline-primary">Primary</button>
+                  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                  <button type="button" class="btn btn-outline-success">Success</button>
+                  <button type="button" class="btn btn-outline-info">Info</button>
+                  <button type="button" class="btn btn-outline-warning">Warning</button>
+                  <button type="button" class="btn btn-outline-danger">Danger</button>
+                </p>
+
+                <div class="bs-component d-flex align-items-center gap-3">
+                  <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                  <button type="button" class="btn btn-primary">Default button</button>
+                  <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                </div>
+
+              </div>
+              <div class="col-lg-4">
+
+                <div class="bs-component mb-3">
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                      <input type="checkbox" checked="" autocomplete="off"> Active
+                    </label>
+                    <label class="btn btn-primary">
+                      <input type="checkbox" autocomplete="off"> Check
+                    </label>
+                    <label class="btn btn-primary">
+                      <input type="checkbox" autocomplete="off"> Check
+                    </label>
+                  </div>
+                </div>
+
+                <div class="bs-component mb-3">
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                      <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Active
+                    </label>
+                    <label class="btn btn-primary">
+                      <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                    </label>
+                    <label class="btn btn-primary">
+                      <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+                    </label>
+                  </div>
+                </div>
+
+                <div class="bs-component mb-3">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary">Left</button>
+                    <button type="button" class="btn btn-secondary">Middle</button>
+                    <button type="button" class="btn btn-secondary">Right</button>
+                  </div>
+                </div>
+
+                <div class="bs-component mb-3">
+                  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                      <button type="button" class="btn btn-secondary">1</button>
+                      <button type="button" class="btn btn-secondary">2</button>
+                      <button type="button" class="btn btn-secondary">3</button>
+                      <button type="button" class="btn btn-secondary">4</button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second group">
+                      <button type="button" class="btn btn-secondary">5</button>
+                      <button type="button" class="btn btn-secondary">6</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </article>
+      </section>
+
+
+
+      <!-- Typography
+        ================================================== -->
+      <section class="row">
+        <article id="typography" class="container mb-5">
+          <header class="mb-3">
+            <h2>Typography</h2>
+          </header>
+
+          <div class="p-4 pb-1 bg-container shadow rounded">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="mb-4">
+                  <h1>Heading 1</h1>
+                  <h2>Heading 2</h2>
+                  <h3>Heading 3</h3>
+                  <h4>Heading 4</h4>
+                  <h5>Heading 5</h5>
+                  <h6>Heading 6</h6>
+                  <h3>
+                    Heading
+                    <small class="text-muted">with muted text</small>
+                  </h3>
+                  <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="mb-4">
+                  <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus
+                    et
+                    magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+                  </p>
+                  <p><small>This line of text is meant to be treated as fine print.</small></p>
+                  <p>The following is <strong>rendered as bold text</strong>.</p>
+                  <p>The following is <em>rendered as italicized text</em>.</p>
+                  <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+                </div>
+
+              </div>
+              <div class="col-lg-4">
+                <div class="mb-4">
+                  <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+                  <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p class="text-secondary">Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                  <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+                  <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+                  <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                  <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Forms
+        ================================================== -->
+      <section class="row">
+        <article id="forms" class="container mb-5">
+          <header class="mb-3">
+            <h2>Forms</h2>
+          </header>
+
+          <div class="p-4 bg-container shadow rounded">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="bs-component">
+                  <form>
+                    <fieldset>
+                      <div class="form-group mb-2">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small>
+                      </div>
+                      <div class="form-group mb-2">
+                        <label for="exampleSelect1">Example select</label>
+                        <select class="form-select" id="exampleSelect1">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-2">
+                        <label for="exampleTextarea">Example textarea</label>
+                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                      </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-lg-4 offset-lg-1">
+                <form class="bs-component">
+                  <div class="form-group mb-2 has-success">
+                    <label class="form-control-label" for="inputSuccess1">Valid input</label>
+                    <input type="text" value="correct value" class="form-control is-valid" id="inputValid">
+                    <div class="valid-feedback">Success! You've done it.</div>
+                  </div>
+
+                  <div class="form-group mb-2 has-danger">
+                    <label class="form-control-label" for="inputDanger1">Invalid input</label>
+                    <input type="text" value="wrong value" class="form-control is-invalid" id="inputInvalid">
+                    <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
+                  </div>
+
+                  <div class="form-group mb-2">
+                    <label class="control-label">Input addons</label>
+                    <div class="form-group">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                          <span class="input-group-text">.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+
+      <!-- Other
+        ================================================== -->
+      <section class="row">
+        <div class="container mb-5">
+          <div class="row">
+            <article id="breadcrumbs" class="col-12 col-lg-6 mb-5 mb-lg-0 d-flex flex-column">
+              <div class="h-100 p-4 pb-1 bg-container shadow rounded">
+                <header class="mb-3">
+                  <h2>Breadcrumbs</h2>
+                </header>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active">Home</li>
+                </ol>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">Library</li>
+                </ol>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Library</a></li>
+                  <li class="breadcrumb-item active">Data</li>
+                </ol>
+              </div>
+            </article>
+
+            <article id="breadcrumbs" class="col-12 col-lg-6 mb-5 mb-lg-0 d-flex flex-column">
+              <div class="h-100 p-4 bg-container shadow rounded">
+                <header class="mb-3">
+                  <h2>Badges</h2>
+                </header>
+                <div>
+                  <span class="badge bg-primary me-3 mb-3">Primary</span>
+                  <span class="badge bg-secondary me-3 mb-3">Secondary</span>
+                  <span class="badge bg-success text-dark me-3 mb-3">Success</span>
+                  <span class="badge bg-danger me-3 mb-3">Danger</span>
+                  <span class="badge bg-warning text-dark me-3 mb-3">Warning</span>
+                  <span class="badge bg-info me-3 mb-3">Info</span>
+                  <span class="badge bg-light text-dark me-3 mb-3">Light</span>
+                  <span class="badge bg-dark me-3 mb-3">Dark</span>
+                  <span class="badge rounded-pill bg-primary me-3 mb-3">Primary</span>
+                  <span class="badge rounded-pill bg-secondary me-3 mb-3">Secondary</span>
+                  <span class="badge rounded-pill bg-success text-dark me-3 mb-3">Success</span>
+                  <span class="badge rounded-pill bg-danger me-3 mb-3">Danger</span>
+                  <span class="badge rounded-pill bg-warning text-dark me-3 mb-3">Warning</span>
+                  <span class="badge rounded-pill bg-info me-3 mb-3">Info</span>
+                  <span class="badge rounded-pill bg-light text-dark me-3 mb-3">Light</span>
+                  <span class="badge rounded-pill bg-dark me-3 mb-3">Dark</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="row">
+        <article id="alerts" class="container mb-5">
+          <header class="mb-3">
+            <h2>Alerts</h2>
+          </header>
+
+          <div class="p-4 bg-container shadow rounded">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Holy guacamole!</strong> You should check in on <a href="#">some of those fields</a> below.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong>Holy guacamole!</strong> You should check in on <a href="#">some of those fields</a> below.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>Holy guacamole!</strong> You should check in on <a href="#">some of those fields</a> below.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="alert alert-light alert-dismissible fade show" role="alert">
+                  <strong>Holy guacamole!</strong> You should check in on <a href="#">some of those fields</a> below.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="row">
+        <article id="cards" class="container mb-5">
+          <header class="mb-3">
+            <h2>Cards</h2>
+          </header>
+
+          <div class="p-4 bg-container shadow rounded">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="card h-100 text-white bg-primary mb-3">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h4 class="card-title">Primary card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                      the
+                      card's content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card h-100 text-white bg-secondary mb-3">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h4 class="card-title">Secondary card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                      the
+                      card's content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card h-100 bg-light mb-3">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h4 class="card-title">Light card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                      the
+                      card's content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card h-100 text-white bg-dark mb-3">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h4 class="card-title">Dark card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                      the
+                      card's content.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

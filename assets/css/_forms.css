@@ -1,0 +1,43 @@
+/* DROPDOWNS & FORMS */
+
+.dropdown-menu {
+  --bs-dropdown-bg: var(--bs-white);
+  --bs-dropdown-link-hover-bg: var(--bs-light-bg-subtle);
+  --bs-dropdown-link-active-color: var(--bs-white);
+  --bs-dropdown-link-active-bg: var(--bs-primary);
+}
+
+[data-bs-theme="dark"] .dropdown-menu {
+  --bs-dropdown-bg: var(--bs-dark);
+  --bs-dropdown-link-hover-bg: var(--bs-dark-bg-subtle);
+  --bs-dropdown-link-active-color: var(--bs-black);
+  --bs-dropdown-link-active-bg: var(--bs-link-color);
+}
+
+.form-select,
+.form-control,
+select,
+textarea,
+[type="text"],
+[type="email"],
+[type="password"] {
+  background-color: var(--bs-white);
+}
+
+.form-control:focus {
+  background-color: var(--bs-light-bg-subtle);
+}
+
+[data-bs-theme="dark"] .form-select,
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] select,
+[data-bs-theme="dark"] textarea,
+[data-bs-theme="dark"] [type="text"],
+[data-bs-theme="dark"] [type="email"],
+[data-bs-theme="dark"] [type="password"] {
+  background-color: var(--bs-dark);
+}
+
+[data-bs-theme="dark"] .form-control:focus {
+  background-color: var(--bs-dark-bg-subtle);
+}

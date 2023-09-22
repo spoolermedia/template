@@ -1,0 +1,71 @@
+/* INFORMATION */
+
+[data-bs-theme="dark"] .card.bg-light {
+  color: var(--bs-black);
+}
+
+.alert .btn-close {
+  filter: grayscale(0) brightness(0);
+}
+
+.alert-warning {
+  --bs-alert-color: var(--bs-black);
+  --bs-alert-bg: var(--bs-warning-bg-subtle);
+}
+
+.alert-warning a {
+  color: var(--bs-black);
+}
+
+.alert-danger {
+  --bs-alert-color: var(--bs-white);
+  --bs-alert-bg: var(--bs-danger-bg-subtle);
+}
+
+.alert-danger a {
+  color: var(--bs-white);
+}
+
+.alert-danger .btn-close {
+  filter: invert(1) brightness(200%);
+}
+
+.alert-success {
+  --bs-alert-color: var(--bs-dark);
+  --bs-alert-bg: var(--bs-success-bg-subtle);
+}
+
+.alert-success a {
+  color: var(--bs-black);
+}
+
+.alert-light {
+  --bs-alert-color: var(--bs-black);
+  --bs-alert-bg: var(--bs-light);
+  --bs-alert-border-color: var(--bs-border-color-translucent);
+}
+
+.alert-light a {
+  color: var(--bs-black);
+}
+
+.badge {
+  padding-bottom: calc(var(--bs-badge-padding-y) * 1.1);
+  font-weight: 400;
+}
+
+.modal-transparent .modal-content,
+.modal-transparent .modal-header {
+  background: none;
+  border: none;
+}
+
+.modal-transparent .modal-body {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 6px;
+}
+
+.modal-transparent .btn-close {
+  filter: invert(1) brightness(200%);
+}

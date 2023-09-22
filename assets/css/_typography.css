@@ -1,0 +1,24 @@
+/* TYPOGRAPHY */
+
+.font-titles,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--bs-heading-font-family), sans-serif;
+  font-weight: 500;
+}
+
+.font-titles,
+h1,
+.h1 {
+  font-weight: 300;
+}

@@ -5,12 +5,12 @@ jobs:
   Copy-Files-To-Public-Repo:
     runs-on: ubuntu-latest
     steps:
-      - name: Copy files to another repository
+      - name: Copy CSS files to public repo
         uses: nkoppel/push-files-to-another-repository@v1.1.1
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_KEY_CKHICKS }}
         with:
-          source-files: '/'
+          source-files: 'assets/css/*'
           destination-username: 'spoolermedia'
           destination-repository: 'public'
           destination-directory: 'css'

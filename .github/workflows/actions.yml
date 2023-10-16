@@ -31,3 +31,15 @@ jobs:
           user_email: 'contact@ckhicks.com'
           user_name: 'ckhicks'
           commit_message: 'Automated commit from GitHub Action'
+
+      - name: Copies Logo file
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_KEY_CKHICKS }}
+        with:
+          source_file: 'assets/images/icon-spooler-logo.svg'
+          destination_repo: 'spoolermedia/public'
+          destination_folder: 'images'
+          user_email: 'contact@ckhicks.com'
+          user_name: 'ckhicks'
+          commit_message: 'Automated commit from GitHub Action'

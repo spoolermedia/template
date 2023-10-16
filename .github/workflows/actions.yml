@@ -5,8 +5,8 @@ jobs:
   Copy-Files-To-Public-Repo:
     runs-on: ubuntu-latest
     steps:
-      - name: Copy Files to Public Repo
-        uses: nkoppel/push-files-to-another-repository@1.1.0
+      - name: Copy files to another repository
+        uses: nkoppel/push-files-to-another-repository@v1.1.1
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_KEY_CKHICKS }}
         with:

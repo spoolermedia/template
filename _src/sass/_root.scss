@@ -1,4 +1,5 @@
-:root {
+:root:root,
+[data-bs-theme="light"] {
   /* BRANDING */
   --bs-blue: #1096c1;
   --bs-blue-dark: #0e283a;
@@ -155,7 +156,7 @@
   --spooler-btn-padding-y-lg: calc(var(--bs-btn-padding-y) * 2.6);
 }
 
-[data-bs-theme="dark"] {
+:root:root[data-bs-theme="dark"] {
   --bs-gray: #7a8b98;
   --bs-gray-rgb: 122, 139, 152;
 

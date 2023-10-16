@@ -13,12 +13,6 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_KEY_CKHICKS }}
         with:
-          source-files: 'assets/css/*'
-          destination-username: 'spoolermedia'
-          destination-repository: 'public'
-          destination-directory: 'css'
-          commit-email: 'contact@ckhicks.com'
-
           source_file: 'assets/css/template.css'
           destination_repo: 'spoolermedia/public'
           destination_folder: 'css'

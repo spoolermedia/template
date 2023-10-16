@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scss": "sass --no-source-map --style=compressed --watch assets/css",
-    "start": "concurrently \"npm run scss\""
+    "scss": "sass _src/sass:assets/css --no-source-map --style=compressed",
+    "start": "sass _src/sass:assets/css --no-source-map --style=compressed --watch"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,15 @@
+name: Automated Tasks
+run-name: ${{ github.actor }} is using a GitHub Action
+on: [push]
+jobs:
+  Copy-Files-To-Public-Repo:
+    uses: nkoppel/push-files-to-another-repository@1.1.0
+    runs-on: ubuntu-latest
+    env:
+      API_TOKEN_GITHUB: ${{ secrets.API_KEY_CKHICKS }}
+    with:
+      source-files: '/'
+      destination-username: 'spoolermedia'
+      destination-repository: 'public'
+      destination-directory: 'css'
+      commit-email: 'contact@ckhicks.com'

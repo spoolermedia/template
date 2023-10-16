@@ -1,0 +1,24 @@
+{
+  "name": "spooler-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --no-source-map --style=compressed --watch assets/css",
+    "start": "concurrently \"npm run scss\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spoolermedia/template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spoolermedia/template/issues"
+  },
+  "homepage": "https://github.com/spoolermedia/template#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "sass": "^1.69.3"
+  }
+}

@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Copies CSS files
+      - name: Copies CSS file
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_KEY_CKHICKS }}
@@ -16,6 +16,18 @@ jobs:
           source_file: 'assets/css/template.css'
           destination_repo: 'spoolermedia/public'
           destination_folder: 'css'
+          user_email: 'contact@ckhicks.com'
+          user_name: 'ckhicks'
+          commit_message: 'Automated commit from GitHub Action'
+
+      - name: Copies JS file
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_KEY_CKHICKS }}
+        with:
+          source_file: 'assets/js/main.js'
+          destination_repo: 'spoolermedia/public'
+          destination_folder: 'js'
           user_email: 'contact@ckhicks.com'
           user_name: 'ckhicks'
           commit_message: 'Automated commit from GitHub Action'

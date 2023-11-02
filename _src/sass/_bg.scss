@@ -1,29 +1,31 @@
 /* BACKGROUNDS */
+body {
 
-.bg-deep {
-  background-color: var(--bs-white);
-}
+  .bg-deep {
+    background-color: var(--bs-white);
 
-[data-bs-theme="dark"] .bg-deep {
-  background-color: var(--bs-dark);
-}
+    [data-bs-theme="dark"] & {
+      background-color: var(--bs-dark);
+    }
+  }
 
-.bg-container {
-  background-color: var(--bs-light-bg-subtle);
-}
+  .bg-container {
+    background-color: var(--bs-light-bg-subtle);
 
-[data-bs-theme="dark"] .bg-container {
-  background-color: var(--bs-dark-bg-subtle);
-}
+    [data-bs-theme="dark"] & {
+      background-color: var(--bs-dark-bg-subtle);
+    }
+  }
 
-.bg-tertiary {
-  background-color: var(--bs-tertiary);
-}
+  .bg-tertiary {
+    background-color: var(--bs-tertiary);
+  }
 
-.bg-tertiary-light {
-  background-color: var(--bs-tertiary-light);
-}
+  .bg-tertiary-light {
+    background-color: var(--bs-tertiary-light);
+  }
 
-.bg-tertiary-dark {
-  background-color: var(--bs-tertiary-dark);
+  .bg-tertiary-dark {
+    background-color: var(--bs-tertiary-dark);
+  }
 }

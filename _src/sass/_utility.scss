@@ -27,7 +27,11 @@ body {
   }
 
   .border-subtle {
-    border-color: var(--bs-gray-light);
+    border-color: var(--bs-gray-light) !important;
+
+    [data-bs-theme="dark"] & {
+      border-color: var(--bs-gray) !important;
+    }
   }
 
   .border-light {

@@ -149,14 +149,14 @@
   /* --bs-form-invalid-color: #dc3545; */
   /* --bs-form-invalid-border-color: #dc3545; */
 
-  --bs-btn-padding-x: 0.6rem;
-  --bs-btn-padding-y: 0.2rem;
+  --bs-btn-padding-x: 0.7rem;
+  --bs-btn-padding-y: 0.3rem;
   --spooler-btn-padding-x: var(--bs-btn-padding-x);
   --spooler-btn-padding-y: var(--bs-btn-padding-y);
-  --spooler-btn-padding-x-sm: calc(var(--bs-btn-padding-x) * 1.2);
-  --spooler-btn-padding-y-sm: calc(var(--bs-btn-padding-y) * 1);
-  --spooler-btn-padding-x-lg: calc(var(--bs-btn-padding-x) * 2);
-  --spooler-btn-padding-y-lg: calc(var(--bs-btn-padding-y) * 2.6);
+  --spooler-btn-padding-x-sm: calc(var(--spooler-btn-padding-x) * 1.2);
+  --spooler-btn-padding-y-sm: calc(var(--spooler-btn-padding-y) * 1);
+  --spooler-btn-padding-x-lg: calc(var(--spooler-btn-padding-x) * 1.8);
+  --spooler-btn-padding-y-lg: calc(var(--spooler-btn-padding-y) * 2);
 }
 
 :root:root[data-bs-theme="dark"] {

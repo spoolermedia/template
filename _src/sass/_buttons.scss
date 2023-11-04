@@ -2,7 +2,7 @@
 body {
 
   .btn {
-    padding: var(--spooler-btn-padding-y) var(--spooler-btn-padding-x);
+    padding: var(--spooler-btn-padding-y) var(--spooler-btn-padding-x) !important;
     cursor: pointer !important;
   }
 
@@ -11,11 +11,12 @@ body {
   }
 
   .btn-sm {
-    padding: var(--spooler-btn-padding-y-sm) var(--spooler-btn-padding-x-sm);
+    padding: var(--spooler-btn-padding-y-sm) var(--spooler-btn-padding-x-sm) !important;
   }
 
   .btn-lg {
-    padding: var(--spooler-btn-padding-y-lg) var(--spooler-btn-padding-x-lg);
+    padding: var(--spooler-btn-padding-y-lg) var(--spooler-btn-padding-x-lg) !important;
+    line-height: 1;
   }
 
   .btn-none:focus {

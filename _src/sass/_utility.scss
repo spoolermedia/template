@@ -26,6 +26,14 @@ body {
     }
   }
 
+  .shadow-hover:hover {
+    box-shadow: 0 0.5rem 1rem -0.125rem rgba(var(--bs-gray-rgb), 0.2) !important;
+
+    [data-bs-theme="dark"] & {
+      box-shadow: 0 0.5rem 1rem -0.125rem rgba(var(--bs-black-rgb), 0.4) !important;
+    }
+  }
+
   .border-subtle {
     border-color: var(--bs-gray-light) !important;
 

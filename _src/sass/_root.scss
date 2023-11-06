@@ -38,7 +38,7 @@
 
   /* COLORS */
   --bs-primary: var(--bs-blue);
-  --bs-primary-rgb: 16, 150, 193;
+  --bs-primary-rgb: 48, 86, 119;
   --bs-primary-bg-subtle: #2e8cac;
   --bs-primary-border-subtle: #2e8cac;
 
@@ -170,6 +170,9 @@
   --bs-gray-light-rgb: 122, 139, 152;
 
   --bs-light-bg-subtle: #e6ddd6;
+
+  --bs-primary: #1096c1;
+  --bs-primary-rgb: 16, 150, 193;
 
   --bs-body-color: var(--bs-white);
   --bs-body-color-rgb: var(--bs-white-rgb);

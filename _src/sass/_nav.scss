@@ -1,6 +1,10 @@
 /* NAVIGATION */
 body {
 
+  .nav-link {
+    padding-top: 0.1rem !important;
+  }
+
   .breadcrumb-item a {
     text-decoration: none;
   }

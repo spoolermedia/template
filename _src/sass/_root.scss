@@ -1,7 +1,7 @@
 :root:root,
 [data-bs-theme="light"] {
   /* BRANDING */
-  --bs-blue: #1096c1;
+  --bs-blue: #305677;
   --bs-blue-dark: #0e283a;
   /* --bs-indigo: #6610f2; ; */
   --bs-purple: #c051d2;
@@ -110,9 +110,11 @@
   --bs-link-color-rgb: var(--bs-primary-rgb);
   --bs-link-hover-color: var(--bs-tertiary-dark);
   --bs-link-hover-color-rgb: var(--bs-tertiary-dark-rgb);
+
   --bs-nav-link-color: var(--bs-gray);
-  --bs-nav-link-hover-color: var(--bs-dark);
-  --bs-navbar-active-color: var(--bs-dark);
+  --bs-nav-link-hover-color: var(--bs-primary);
+  --bs-navbar-active-color: var(--bs-primary);
+  --bs-nav-link-padding-y: 0;
   /* --bs-code-color: #d63384; */
   /* --bs-highlight-bg: #fff3cd; */
 
@@ -163,6 +165,7 @@
 }
 
 :root:root[data-bs-theme="dark"] {
+  --bs-blue: #1096c1;
   --bs-gray-light: #7a8b98;
   --bs-gray-light-rgb: 122, 139, 152;
 

@@ -149,6 +149,9 @@
   /* --bs-form-invalid-color: #dc3545; */
   /* --bs-form-invalid-border-color: #dc3545; */
 
+  --bs-btn-font-family: var(--bs-heading-font-family);
+  --bs-btn-font-weight: 300;
+
   --bs-btn-padding-x: 0.7rem;
   --bs-btn-padding-y: 0.3rem;
   --spooler-btn-padding-x: var(--bs-btn-padding-x);

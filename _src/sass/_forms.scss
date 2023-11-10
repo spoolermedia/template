@@ -24,6 +24,10 @@ body {
   [type="email"],
   [type="password"] {
     background-color: var(--bs-white);
+
+    [data-bs-theme="dark"] & {
+      background-color: var(--bs-black);
+    }
   }
 
   .form-control:focus {
@@ -31,16 +35,6 @@ body {
   }
 
   [data-bs-theme="dark"] & {
-
-    .form-select,
-    .form-control,
-    select,
-    textarea,
-    [type="text"],
-    [type="email"],
-    [type="password"] {
-      background-color: var(--bs-dark);
-    }
 
     .form-control:focus {
       background-color: var(--bs-dark-bg-subtle);

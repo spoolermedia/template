@@ -34,20 +34,20 @@ body {
     }
   }
 
-  .border-subtle {
-    border-color: var(--bs-gray-light) !important;
-
-    [data-bs-theme="dark"] & {
-      border-color: var(--bs-gray) !important;
-    }
-  }
-
   .border-light {
     border-color: var(--bs-border-color-translucent) !important;
   }
 
   .border-dark {
     border-color: rgba(var(--bs-black-rgb), var(--bs-border-opacity)) !important;
+  }
+
+  .border-subtle {
+    border-color: var(--bs-gray-light) !important;
+
+    [data-bs-theme="dark"] & {
+      border-color: var(--bs-gray) !important;
+    }
   }
 
   .border-deep {

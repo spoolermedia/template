@@ -51,10 +51,10 @@ body {
   }
 
   .border-deep {
-    border-color: var(--bs-white);
+    border-color: var(--bs-white) !important;
 
     [data-bs-theme="dark"] & {
-      border-color: var(--bs-black);
+      border-color: var(--bs-black) !important;
     }
   }
 }
